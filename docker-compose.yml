@@ -1,0 +1,38 @@
+services:
+  # Runs dbt seed + run, writes DuckDB file to the shared volume, then exits.
+  dbt-runner:
+    build:
+      context: ./backend/dbt
+      dockerfile: Dockerfile
+    volumes:
+      - dbt-data:/data
+    environment:
+      DBT_DUCKDB_PATH: /data/invoice_ledger.duckdb
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - dbt-data:/data
+    environment:
+      DUCKDB_PATH: /data/invoice_ledger.duckdb
+      APP_DB_URL: sqlite:////data/app.db
+      AUTH_SECRET: invoice-ledger-local-dev-secret
+    depends_on:
+      dbt-runner:
+        condition: service_completed_successfully
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  dbt-data:

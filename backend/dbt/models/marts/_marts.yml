@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: mart_invoices
+    description: >
+      Stable, query-ready invoice mart. This model IS the API contract.
+      Any column added or removed here is a versioned breaking change.
+    columns:
+      - name: invoice_id
+        tests: [not_null, unique]
+      - name: invoice_number
+        tests: [not_null, unique]
+      - name: client_name
+        tests: [not_null]
+      - name: client_email
+        tests: [not_null]
+      - name: amount
+        tests: [not_null]
+      - name: currency
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [USD, EUR, GBP, CAD, AUD]
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [draft, sent, paid, overdue, cancelled]
+      - name: issued_date
+        tests: [not_null]
+      - name: due_date
+        tests: [not_null]
+      - name: paid_date
+        tests: []
+      - name: is_overdue
+        tests: [not_null]
+      - name: days_overdue
+        tests: [not_null]
+      - name: collected_amount
+        tests: [not_null]

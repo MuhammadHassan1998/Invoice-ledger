@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_invoices
+    description: >
+      Lightly-cleaned view of raw_invoices. One row per invoice.
+      No business logic; purely a typed, renamed projection of the source.
+    columns:
+      - name: invoice_id
+        description: Surrogate key from the raw source.
+        tests:
+          - not_null
+          - unique
+      - name: invoice_number
+        description: Human-readable invoice reference (e.g. INV-2024-001).
+        tests:
+          - not_null
+          - unique
+      - name: client_name
+        tests: [not_null]
+      - name: client_email
+        tests: [not_null]
+      - name: amount
+        tests: [not_null]
+      - name: currency
+        tests: [not_null]
+      - name: status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [draft, sent, paid, overdue, cancelled]
+      - name: issued_date
+        tests: [not_null]
+      - name: due_date
+        tests: [not_null]

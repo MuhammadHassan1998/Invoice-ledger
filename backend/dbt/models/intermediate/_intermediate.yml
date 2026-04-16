@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: int_invoices_enriched
+    description: >
+      Enriched invoice records. Adds derived boolean/numeric flags computed from
+      business rules (overdue logic, collected amounts). This is the only place
+      those rules are defined.
+    columns:
+      - name: invoice_id
+        tests: [not_null, unique]
+      - name: is_overdue
+        description: True when status is open and due_date is in the past.
+        tests: [not_null]
+      - name: days_overdue
+        description: Calendar days past due_date for open invoices; 0 otherwise.
+        tests: [not_null]
+      - name: collected_amount
+        description: Equals amount when status=paid, else 0.
+        tests: [not_null]

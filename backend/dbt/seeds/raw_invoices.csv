@@ -1,0 +1,21 @@
+id,invoice_number,client_name,client_email,amount,currency,status,issued_at,due_at,paid_at,description
+1,INV-2024-001,Acme Solutions,billing@acmesolutions.com,1250.00,USD,paid,2024-01-05,2024-01-19,2024-01-18,Website redesign and support
+2,INV-2024-002,Horizon Logistics,accounts@horizonlogistics.com,3400.00,USD,paid,2024-01-10,2024-01-24,2024-01-23,API integration and tracking
+3,INV-2024-003,Crest Marketing,finance@crestmarketing.com,875.50,USD,overdue,2024-02-01,2024-02-15,,February marketing retainer
+4,INV-2024-004,Meridian Health,ap@meridianhealth.eu,5000.00,EUR,paid,2024-02-14,2024-02-28,2024-02-26,Patient portal implementation
+5,INV-2024-005,Summit Retail,billing@summitretail.com,2200.00,USD,sent,2024-03-01,2024-03-15,,Inventory dashboard build
+6,INV-2024-006,Beacon IT,accounts@beaconit.com,1800.00,USD,paid,2024-03-10,2024-03-24,2024-03-20,CRM customization services
+7,INV-2024-007,NorthStar Energy,ap@northstarenergy.com,9500.00,USD,overdue,2024-03-20,2024-04-03,,Energy analytics platform
+8,INV-2024-008,Core Media,ap@coremedia.com,450.00,USD,cancelled,2024-04-01,2024-04-15,,Cancelled campaign creative work
+9,INV-2024-009,Vanguard Warehousing,finance@vanguardware.com,7800.00,USD,paid,2024-04-05,2024-04-19,2024-04-17,Warehouse automation consulting
+10,INV-2024-010,Atlas Security,ap@atlassecurity.com,3250.00,USD,sent,2024-04-15,2024-04-29,,Security audit and hardening
+11,INV-2024-011,Vertex AI,billing@vertexai.com,12000.00,USD,paid,2024-05-01,2024-05-15,2024-05-14,Machine learning platform build
+12,INV-2024-012,Novus Research,accounts@novusresearch.com,6750.00,USD,overdue,2024-05-10,2024-05-24,,Data science model tuning
+13,INV-2024-013,Pixel Labs,ap@pixellabs.com,2100.00,USD,draft,2024-05-20,2024-06-03,,Mobile app UI design
+14,INV-2024-014,Catalyst Systems,si.billing@catalystsystems.com,18500.00,USD,paid,2024-06-01,2024-06-15,2024-06-10,Full-stack platform rebuild
+15,INV-2024-015,Meridian Analytics,we.finance@meridiananalytics.com,4400.00,USD,sent,2024-06-10,2024-06-24,,Dashboard analytics and reporting
+16,INV-2024-016,Equinox Software,lex.ap@equinoxsoftware.com,3300.00,USD,overdue,2024-06-15,2024-06-29,,Backend microservices migration
+17,INV-2024-017,Greenfield Studios,billing@greenfieldstudios.com,1950.00,USD,paid,2024-07-01,2024-07-15,2024-07-12,Brand refresh and campaign design
+18,INV-2024-018,Unity Robotics,accounts@unityrobotics.com,8800.00,USD,sent,2024-07-10,2024-07-24,,Lab automation software
+19,INV-2024-019,Peak Manufacturing,bm.finance@peakmfg.com,5500.00,USD,paid,2024-07-20,2024-08-03,2024-07-30,Production line upgrade advisory
+20,INV-2024-020,BrightPath Consulting,billing@brightpathco.com,2750.00,USD,draft,2024-08-01,2024-08-15,,Strategy workshop follow-up

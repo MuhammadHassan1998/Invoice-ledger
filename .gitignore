@@ -1,0 +1,31 @@
+# dbt
+backend/dbt/target/
+backend/dbt/dbt_packages/
+backend/dbt/logs/
+backend/dbt/.user.yml
+backend/data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
+
+# Claude Code
+.claude/
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
